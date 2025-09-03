@@ -1,0 +1,26 @@
+def reverse_list(lst):
+
+    return lst[::-1]  
+
+def list_sort(lst):
+
+    return sorted(lst, key=abs, reverse=True)
+
+
+def change(lst):
+
+    lst[0], lst[-1] = lst[-1], lst[0]
+    return lst
+   
+if __name__ == "__main__":
+    original = [3, -7, 2, -1, 9, -5]
+    print("Исходный список              :", original)
+
+    rev = reverse_list(original)
+    print("1) Обратный порядок           :", rev)
+
+    sorted_by_abs = list_sort(original)
+    print("2) Сортировка по |значению| ↓:", sorted_by_abs)
+
+    changed = change(original.copy()) 
+    print("3) После замены 1‑го и пос‑го:", changed)
