@@ -1,0 +1,15 @@
+num1=5
+num2=2
+
+sum_result=num1+num2
+sub_result=num1-num2
+mul_result=num1*num2
+div_result=num1/num2
+
+print("Abzal A ИС 24-22")
+print(num1)
+print(num2)
+print(sum_result)
+print(sub_result)
+print(mul_result)
+print(div_result)
