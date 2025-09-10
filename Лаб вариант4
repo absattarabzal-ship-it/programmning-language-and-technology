@@ -15,3 +15,34 @@ def find_average_element():
 find_average_element()
 
 
+
+
+
+def find_max_diagonal():
+    
+    A = [
+        [3, 5, 2, 8],
+        [1, 9, 4, 6],
+        [7, 2, 5, 3],
+        [4, 6, 1, 7]
+    ]
+    
+    
+    max_element = A[0][0]
+    max_position = (0, 0)
+    
+    for i in range(4):
+        if A[i][i] > max_element:
+            max_element = A[i][i]
+            max_position = (i, i)
+    
+    
+    print("Массив A(4,4):")
+    for row in A:
+        print(row)
+    
+    print(f"\nНаибольший элемент на главной диагонали: A[{max_position[0]}][{max_position[1]}] = {max_element}")
+
+
+find_max_diagonal()
+
