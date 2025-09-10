@@ -1,0 +1,44 @@
+def find_max_odd():
+    a10 = [23, 56, 17, 42, 89, 64, 33, 71, 98, 55]
+    
+    max_odd = None
+    
+    for num in a10:
+        if num % 2 != 0:
+            if max_odd is None or num > max_odd:
+                max_odd = num
+    
+    print("Массив a10:", a10)
+    if max_odd is not None:
+        print(f"Максимальное нечетное число в массиве: {max_odd}")
+    else:
+        print("В массиве нет нечетных чисел")
+
+find_max_odd()
+
+def find_max_secondary_diagonal():
+    A = [
+        [3, 5, 2, 8],
+        [1, 9, 4, 6],
+        [7, 2, 5, 3],
+        [4, 6, 1, 7]
+    ]
+    
+    max_element = None
+
+    for i in range(4):
+        j = 3 - i
+        current = A[i][j]
+        
+        if max_element is None or current > max_element:
+            max_element = current
+            max_position = (i, j)
+    
+    print("Массив A(4,4):")
+    for row in A:
+        print(row)
+    
+    print(f"\nНаибольший элемент на дополнительной диагонали: A[{max_position[0]}][{max_position[1]}] = {max_element}")
+
+find_max_secondary_diagonal()
+
