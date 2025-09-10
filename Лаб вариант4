@@ -1,0 +1,17 @@
+def find_average_element():
+    a10 = [3.5, 2.1, 4.8, 5.2, 3.5, 6.1, 2.9, 4.3, 5.7, 3.0]
+    
+    average = sum(a10) / len(a10)
+    
+    found = False
+    for i, num in enumerate(a10):
+        if abs(num - average) < 1e-9:  
+            print(f"Элемент a10[{i}] = {num} равен среднему арифметическому ({average:.2f})")
+            found = True
+    
+    if not found:
+        print(f"Элемент, равный среднему арифметическому ({average:.2f}), не найден в массиве")
+
+find_average_element()
+
+
